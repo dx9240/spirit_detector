@@ -5,11 +5,13 @@ demo video: https://www.loom.com/share/3ecb11ebc8c54dab8dc716d47e67e966?sid=d365
 
 Usage: Upload a photo of an object and type "analyze" into the chat before submitting. User can ask questions about the resulting spectral analysis data.
 
-This is a a creative aid for players of narrative roleplaying games. It can also be used to supplment the activity of thrifting, antiquing, and flea market browsing as a storytelling activity. Pyschic Learn is to be used as a spectral analysis device, or, ghost hunting device that scans objects for supernatural connections and resonaces. 
-
+This is a a creative aid for players of narrative roleplaying games. This fits well with collaborative storytelling tabletop roleplaying games which have supernatural themes, such as Urban Shadows.
+ It can also be used to supplment the activity of thrifting, antiquing, and flea market browsing as a storytelling activity. Pyschic Learn is to be used as a spectral analysis device, or, ghost hunting device that scans objects for supernatural connections and resonaces. It therefore allows the user/player to interact with the real world by selecting physical objects to feed into the Psychic Learn device, and augmenting this (creative) choice with the power of a LLM agent. Here, then, the unpredictability and surprisal which can be charactsitic of LLM output is leveraged as a creative aid. 
 Inspired by ARGs (alternate reality games), the book 'Ghost Hunting for Dummies', commerical 'ghost hunting' devices, the board games Mysterium and Dixit, interactive fiction and locative narratives,and tabletop roleplaying games such as Urban Shadows.
 
-I used n8n workflow automation to build the Mistral agent and the wikipedia search tool. By including references to information on wikipedia, the user will have the opporunity to leave the Psychic Learn interface and research the information produced by it on another platfrom (such as web search), thereby supporting an ARG style of play.
+Pyschic Learn helps the creative burden problem that roleplaying game dungeon masters and masters of ceremony have with constantly needing to come up with new narrative senarios and narrative 'hooks' to engage players and encorage interaction.
+
+I used n8n workflow automation to build the Mistral agent using Pixtrel large and the wikipedia search tool. By including references to information on wikipedia, the user will have the opporunity to leave the Psychic Learn interface and research the information produced by it on another platfrom (such as web search), thereby supporting a more immersive ARG style of play.
 
 NOTES and future TODO:
 
