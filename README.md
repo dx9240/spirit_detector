@@ -13,6 +13,10 @@ Pyschic Learn helps the creative burden problem that roleplaying game dungeon ma
 
 I used n8n workflow automation to build the Mistral agent using Pixtrel large and the wikipedia search tool. By including references to information on wikipedia, the user will have the opporunity to leave the Psychic Learn interface and research the information produced by it on another platfrom (such as web search), thereby supporting a more immersive ARG style of play.
 
+Issues to solve:
+-runs too slowly
+-the wikipedia bits often give undesriably unpredictable output. (solution: add examples to the prompt? some old school NLP checks and processing to reel it in?)
+
 NOTES and future TODO:
 
 Create object reading agent
