@@ -2,6 +2,8 @@
 
 Link to the demo: https://lesia-tkacz.app.n8n.cloud/webhook/63ad13d4-691b-47f3-b146-d1701935cad0/chat
 
+Usage: Upload a photo of an object and type "analyze" into the chat before submitting. User can ask questions about the resulting spectral analysis data.
+
 This is a a creative aid for players of narrative roleplaying games. It can also be used to supplment the activity of thrifting, antiquing, and flea market browsing as a storytelling activity. Pyschic Learn is to be used as a spectral analysis device, or, ghost hunting device that scans objects for supernatural connections and resonaces. 
 
 Inspired by ARGs (alternate reality games), the book 'Ghost Hunting for Dummies', commerical 'ghost hunting' devices, the board games Mysterium and Dixit, interactive fiction and locative narratives,and tabletop roleplaying games such as Urban Shadows.
