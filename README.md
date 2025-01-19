@@ -1,6 +1,7 @@
 # spirit_detector "Psychic Learn"
 
 Link to the demo: https://lesia-tkacz.app.n8n.cloud/webhook/63ad13d4-691b-47f3-b146-d1701935cad0/chat
+demo video: https://www.loom.com/share/3ecb11ebc8c54dab8dc716d47e67e966?sid=d36565de-dc22-46fc-b0e4-dee7fcdf539a
 
 Usage: Upload a photo of an object and type "analyze" into the chat before submitting. User can ask questions about the resulting spectral analysis data.
 
