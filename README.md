@@ -1,12 +1,14 @@
 # spirit_detector "Psychic Learn"
 
+Link to the demo: https://lesia-tkacz.app.n8n.cloud/webhook/63ad13d4-691b-47f3-b146-d1701935cad0/chat
+
 This is a a creative aid for players of narrative roleplaying games. It can also be used to supplment the activity of thrifting, antiquing, and flea market browsing as a storytelling activity. Pyschic Learn is to be used as a spectral analysis device, or, ghost hunting device that scans objects for supernatural connections and resonaces. 
 
 Inspired by ARGs (alternate reality games), the book 'Ghost Hunting for Dummies', commerical 'ghost hunting' devices, the board games Mysterium and Dixit, interactive fiction and locative narratives,and tabletop roleplaying games such as Urban Shadows.
 
 I used n8n workflow automation to build the Mistral agent and the wikipedia search tool. By including references to information on wikipedia, the user will have the opporunity to leave the Psychic Learn interface and research the information produced by it on another platfrom (such as web search), thereby supporting an ARG style of play.
 
-NOTES
+NOTES and future TODO:
 
 Create object reading agent
  - How could this adapt to the environment? (location, temperature, local landmarks, current date)
