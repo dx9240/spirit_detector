@@ -1,0 +1,261 @@
+{
+  "name": "psychic learn hackathon submission",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "*PSYCHIC LEARN*\n\nAWAITING INPUT IMAGE FOR SPECTRAL ANALYSIS_",
+        "options": {
+          "allowFileUploads": true,
+          "subtitle": "A Spectral Analyzer to be used as a narrative aid in Roleplaying Games 👻",
+          "title": "Psychic Learn"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -60,
+        0
+      ],
+      "id": "5fce505b-0ed0-4796-b967-ec5e8501f017",
+      "name": "When chat message received",
+      "webhookId": "63ad13d4-691b-47f3-b146-d1701935cad0"
+    },
+    {
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You and the user are performing a narrative roleplaying game scenario where you both pretend that ghosts and spirits exist. In this roleplaying scenario, spirits leave supernatural traces on objects and these traces are detectable by a device. The goal of this scenario is to produce a surprising and creative narrative vingette about the object and fictional spirit so that the user can enjoy an interesting and intriguing flash fiction story.\n\nHere are your instructions:\nImagine that you are the device which performs supernatural spirit data analysis on objects. The purpose of the device is to take an image of an object as input and identify it. First, prompt the user for an image of an object that the device will perform a reading on. Second, output three units of fictional supernatural data so that the user can ask the device questions about it.\nUsing the object as inspiration, perform 1-3 Wikipedia queries to find a person, historical event, or location, etc. that can be narratively connected to the object. If the wikipedia information helps to make the spectral analysis narrative more interesting, then incorporate one reference to the entity found through Wikipedia in no more than 1 short sentence. Don't mention that wikipedia was used because this ruins the user's narrative immersion. Remember, any wikipedia information you choose to use must be narratively incorporated into the text, but make sure there is just enough information for the user to perform their own search and discover the connection with the wikipedia reference.\n\nNext, display the text \"INPUT SPECTRAL ANALYSIS QUERY_\"\n\nprint \"END OF SPECTRAL ANALYSIS\" after the user has asked two questions.\n",
+          "passthroughBinaryImages": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        220,
+        0
+      ],
+      "id": "04633502-089b-47fd-b7c5-5350d5efd231",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 8
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        320,
+        220
+      ],
+      "id": "d40c37ae-9027-451e-9e35-033c7a79a62f",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "model": "pixtral-large-latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        180,
+        220
+      ],
+      "id": "f4387b70-8434-4f13-b9a7-3efe43f4b552",
+      "name": "pixtral large",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "ciYXrIAcX6HGP6f0",
+          "name": "Mistral Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        440,
+        220
+      ],
+      "id": "28e46b90-9044-4679-96ae-15f87e864a63",
+      "name": "Wikipedia"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Output an image of an astronaut",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Always output an image",
+          "passthroughBinaryImages": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        1200,
+        100
+      ],
+      "id": "90b9d4b9-bcb3-4792-a92e-3d71d712a02c",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 8
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1300,
+        320
+      ],
+      "id": "ed7cecdf-87c7-4774-83d0-495bd7651d9b",
+      "name": "Window Buffer Memory1"
+    },
+    {
+      "parameters": {
+        "model": "pixtral-large-latest",
+        "options": {
+          "safeMode": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        340
+      ],
+      "id": "1c4181c9-1b3a-4e50-9af2-8dd27d88d3d7",
+      "name": "pixtral small1",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "ciYXrIAcX6HGP6f0",
+          "name": "Mistral Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        320
+      ],
+      "id": "eb068fda-0899-4ebe-994c-86f421539395",
+      "name": "Wikipedia1"
+    }
+  ],
+  "pinData": {
+    "When chat message received": [
+      {
+        "json": {
+          "action": "sendMessage",
+          "sessionId": "bce81d8d-f0a5-4f47-b42d-1f55a32b0017",
+          "chatInput": " ",
+          "files": [
+            {
+              "fileName": "IMG_20250119_002424.jpg",
+              "fileSize": "318 kB",
+              "fileType": "image",
+              "mimeType": "image/jpeg",
+              "fileExtension": "jpeg",
+              "binaryKey": "data0"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pixtral large": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory1": {
+      "ai_memory": [
+        []
+      ]
+    },
+    "pixtral small1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2b0df7ce-f886-49db-b842-8092720265fa",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1348df4afed28bcda5fdaf8da364456c07e89b8a3f833b8407d5050a9dbffbaa"
+  },
+  "id": "dOwtHnYJV336zGNX",
+  "tags": []
+}
